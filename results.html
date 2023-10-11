@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breeze - Search Results</title>
+    <style>
+        body {
+            background-color: #111;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 1000%;
+            background: linear-gradient(to right, #589AFF, #0062FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 0;
+        }
+
+        /* Custom Styles for the Search Box and Results Container */
+
+        #search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gcse-searchbox, .gcse-searchresults {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 10px;
+        }
+
+        
+
+        .search-container form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            flex-grow: 1; /* Allow the input to grow and fill available space */
+            max-width: 70%; /* Increase the input's max-width for more separation */
+            background-color: #333; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #222; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px; /* Add some margin to separate the button from the input */
+        }
+
+        .search-container button:hover {
+            background-color: #444; /* Dark mode hover color */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" style="text-decoration-line: none; font-weight: bolder;"><h1><span>breeze</span></h1></a>
+    </header>
+    
+    <div class="search-container">
+        <form method="get" action="results.html">
+            <!-- Replace 'YOUR_CSE_ID' with your Custom Search Engine ID -->
+            <input type="hidden" name="cx" value="a7d6f7b33e16042c4">
+            <input type="text" name="q" placeholder="Search the web...">
+            <button type="submit">Search</button>
+        </form>
+
+    <script async src="https://cse.google.com/cse.js?cx=a7d6f7b33e16042c4">
+    </script>
+    <div class="gcse-searchresults-only"></div>
+</body>
+</html>
